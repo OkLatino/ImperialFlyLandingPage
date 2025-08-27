@@ -101,22 +101,27 @@
             transform: scale(1.05);
           }
         }
-        /* Plane animation */
-        .plane-takeoff {
-            animation: takeOff 4s ease-in-out infinite;
+        /* New Plane animation */
+        .plane-fly-across {
+            animation: flyAcross 15s linear infinite;
+            pointer-events: none; /* Make sure it doesn't block clicks */
         }
-        @keyframes takeOff {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 1;
+        @keyframes flyAcross {
+            from {
+                transform: translateX(-100%);
             }
-            50% {
-                transform: translate(20px, -10px) rotate(15deg);
-                opacity: 1;
+            to {
+                transform: translateX(100vw);
             }
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 1;
+        }
+        /* Mobile Hero Full Screen */
+        @media (max-width: 767px) {
+            #hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                padding-top: 5rem;
+                padding-bottom: 5rem;
             }
         }
     </style>
@@ -146,7 +151,7 @@
 <body class="bg-brand-dark text-gray-200">
 
     <!-- HEADER -->
-    <header class="bg-brand-dark/80 backdrop-blur-lg shadow-md shadow-brand-gold/10 sticky top-0 z-50">
+    <header class="bg-brand-dark/80 backdrop-blur-lg shadow-md shadow-brand-gold/10 sticky top-0 z-50 overflow-x-clip">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="text-2xl font-serif tracking-widest">
@@ -154,7 +159,7 @@
                     IMPERIAL<span class="text-brand-gold">FLY</span>
                 </a>
             </div>
-            <!-- Trust Signals & Animated Plane -->
+            <!-- Trust Signals -->
             <div class="hidden md:flex items-center space-x-6 text-sm text-gray-400">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-check-circle text-brand-gold"></i>
@@ -169,16 +174,16 @@
                     <span>Soporte 24/7</span>
                 </div>
             </div>
-             <!-- Animated Plane Icon -->
-            <div class="text-brand-gold text-2xl plane-takeoff">
-                <i class="fa-solid fa-plane"></i>
-            </div>
+        </div>
+        <!-- Animated Plane Icon -->
+        <div class="absolute top-1/2 -translate-y-1/2 plane-fly-across text-brand-gold text-lg">
+             <i class="fa-solid fa-plane"></i>
         </div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
-        <section id="hero" class="relative text-white py-16 md:py-24 overflow-hidden">
+        <section id="hero" class="relative text-white md:py-24 overflow-hidden">
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <!-- Background Image: User's specified path -->
             <img src="assets\imperialhero.jpeg" 
@@ -192,8 +197,8 @@
                     <div class="text-center lg:text-left mb-10 lg:mb-0">
                         <span class="inline-block bg-brand-gold text-brand-dark font-bold text-sm px-4 py-1 rounded-full mb-4 animate-bounce">OFERTA EXCLUSIVA</span>
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold leading-tight mb-4">Tu Acceso a Business Class Exclusivo</h1>
-                        <p class="text-lg md:text-xl text-gray-200 mb-6">Vuela en **Business y First Class** con hasta un **70% de descuento**. Accedemos a tarifas de consolidador no disponibles al público para ofrecerte lujo a un precio inigualable.</p>
-                        <p class="text-sm text-gray-300">Respuesta garantizada en menos de 30 minutos.</p>
+                        <p class="text-lg md:text-xl text-white-200 mb-6">Vuela en **Business y First Class** con hasta un **70% de descuento**. Accedemos a tarifas de consolidador no disponibles al público para ofrecerte lujo a un precio inigualable.</p>
+                        <p class="text-sm text-white-300">Respuesta garantizada en menos de 30 minutos.</p>
                     </div>
 
                     <!-- Right Column: Lead Capture Form -->
