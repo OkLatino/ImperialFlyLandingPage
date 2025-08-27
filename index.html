@@ -101,6 +101,24 @@
             transform: scale(1.05);
           }
         }
+        /* Plane animation */
+        .plane-takeoff {
+            animation: takeOff 4s ease-in-out infinite;
+        }
+        @keyframes takeOff {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(20px, -10px) rotate(15deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -136,7 +154,7 @@
                     IMPERIAL<span class="text-brand-gold">FLY</span>
                 </a>
             </div>
-            <!-- Trust Signals (Desktop) -->
+            <!-- Trust Signals & Animated Plane -->
             <div class="hidden md:flex items-center space-x-6 text-sm text-gray-400">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-check-circle text-brand-gold"></i>
@@ -151,13 +169,17 @@
                     <span>Soporte 24/7</span>
                 </div>
             </div>
+             <!-- Animated Plane Icon -->
+            <div class="text-brand-gold text-2xl plane-takeoff">
+                <i class="fa-solid fa-plane"></i>
+            </div>
         </div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
         <section id="hero" class="relative text-white py-16 md:py-24 overflow-hidden">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 bg-black opacity-60"></div>
             <!-- Background Image: User's specified path -->
             <img src="assets\imperialhero.jpeg" 
                  onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/0F121D/FFFFFF?text=Imagen+No+Disponible';"
@@ -165,18 +187,18 @@
                  class="absolute inset-0 w-full h-full object-cover">
             
             <div class="container mx-auto px-6 relative z-10">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Column: Headline & Value Prop -->
-                    <div class="text-center md:text-left">
+                    <div class="text-center lg:text-left mb-10 lg:mb-0">
                         <span class="inline-block bg-brand-gold text-brand-dark font-bold text-sm px-4 py-1 rounded-full mb-4 animate-bounce">OFERTA EXCLUSIVA</span>
-                        <h1 class="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-4">Tu Acceso a Business Class Exclusivo</h1>
-                        <p class="text-lg md:text-xl text-white-300 mb-6">Vuela en Business y First Class con hasta un 70% de descuento. Accedemos a tarifas de consolidador no disponibles al público para ofrecerte lujo a un precio inigualable.</p>
-                        <p class="text-sm text-white-400">Respuesta garantizada en menos de 30 minutos.</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold leading-tight mb-4">Tu Acceso a Business Class Exclusivo</h1>
+                        <p class="text-lg md:text-xl text-gray-200 mb-6">Vuela en **Business y First Class** con hasta un **70% de descuento**. Accedemos a tarifas de consolidador no disponibles al público para ofrecerte lujo a un precio inigualable.</p>
+                        <p class="text-sm text-gray-300">Respuesta garantizada en menos de 30 minutos.</p>
                     </div>
 
                     <!-- Right Column: Lead Capture Form -->
                     <div id="form-container">
-                        <form id="lead-form" class="bg-white p-8 rounded-lg shadow-2xl text-gray-800" novalidate>
+                        <form id="lead-form" class="bg-white p-6 md:p-8 rounded-lg shadow-2xl text-gray-800" novalidate>
                             <h3 class="text-2xl font-serif font-bold text-center mb-1 text-brand-dark">Reserva Tu Vuelo</h3>
                             <p class="text-center text-gray-600 mb-6">Inicia el proceso para asegurar tu asiento.</p>
                             
@@ -333,7 +355,7 @@
                     </div>
                 </div>
 
-                <div id="deals-container" class="grid md:grid-cols-3 gap-8">
+                <div id="deals-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Deal 1 -->
                     <div class="deal-card bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
                         <h3 class="deal-title text-xl font-bold text-brand-gold mb-2 font-serif"></h3>
@@ -368,7 +390,7 @@
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">OFERTAS EXCLUSIVAS</h2>
                 <p class="max-w-3xl mx-auto text-gray-400 mb-12">Nuestras tarifas preferenciales en rutas populares, disponibles por más tiempo.</p>
                 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Static Deal 1 -->
                     <div class="bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
                         <h3 class="text-xl font-bold text-brand-gold mb-2 font-serif">GDL → Los Ángeles</h3>
