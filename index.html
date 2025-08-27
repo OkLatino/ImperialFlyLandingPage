@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Imperial Fly - Tu Acceso Exclusivo a Vuelos Business y First Class</title>
+    <meta name="description" content="Ahorra hasta un 70% en vuelos de lujo. En Imperial Fly te damos acceso a tarifas exclusivas en Business y First Class que no encontrarás en ningún otro lugar. Solicita tu consulta gratuita.">
+    <meta name="keywords" content="vuelos business class, vuelos first class, boletos de avión de lujo, viajes de negocios, tarifas de consolidador, imperial fly, vuelos baratos business">
+    <meta name="author" content="Imperial Fly">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://imperialfly.mx/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imperialfly.mx/">
+    <meta property="og:title" content="Imperial Fly - Tu Acceso Exclusivo a Vuelos Business y First Class">
+    <meta property="og:description" content="Ahorra hasta un 70% en vuelos de lujo con acceso a tarifas exclusivas.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0F121D/D2AE6D?text=Imperial+Fly">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://imperialfly.mx/">
+    <meta property="twitter:title" content="Imperial Fly - Tu Acceso Exclusivo a Vuelos Business y First Class">
+    <meta property="twitter:description" content="Ahorra hasta un 70% en vuelos de lujo con acceso a tarifas exclusivas.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0F121D/D2AE6D?text=Imperial+Fly">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/0F121D/D2AE6D?text=IF" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Tailwind Config -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F121D;
+            color: #E5E7EB; /* gray-200 */
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom styles for date picker placeholder */
+        input[type="date"] {
+            position: relative;
+            color: #1f2937; /* Default text color for date */
+        }
+        input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+        input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+        input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+        input[type="date"]:in-range::-webkit-datetime-edit-text {
+            color: transparent;
+        }
+        /* Show date text when a value is selected */
+        input[type="date"]:valid {
+            color: #1f2937; /* gray-800 */
+        }
+        input[type="date"]:valid::-webkit-datetime-edit-year-field,
+        input[type="date"]:valid::-webkit-datetime-edit-month-field,
+        input[type="date"]:valid::-webkit-datetime-edit-day-field,
+        input[type="date"]:valid::-webkit-datetime-edit-text {
+            color: inherit;
+        }
+        
+        .form-input-error {
+            border-color: #ef4444; /* red-500 */
+        }
+        .form-error-message {
+            color: #ef4444;
+            font-size: 0.875rem; /* text-sm */
+            margin-top: 0.25rem; /* mt-1 */
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .pulse-slow {
+            animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-slow {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: .9;
+            transform: scale(1.05);
+          }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0F121D',
+                        'brand-gold': '#D2AE6D',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Placeholder for Analytics -->
+    <script>
+        // Google Analytics, Facebook Pixel, etc. would go here
+    </script>
+
+</head>
+<body class="bg-brand-dark text-gray-200">
+
+    <!-- HEADER -->
+    <header class="bg-brand-dark/80 backdrop-blur-lg shadow-md shadow-brand-gold/10 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-serif tracking-widest">
+                <a href="#" class="flex items-center text-white">
+                    IMPERIAL<span class="text-brand-gold">FLY</span>
+                </a>
+            </div>
+            <!-- Trust Signals (Desktop) -->
+            <div class="hidden md:flex items-center space-x-6 text-sm text-gray-400">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-brand-gold"></i>
+                    <span>Empresa Registrada</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-plane-departure text-brand-gold"></i>
+                    <span>+100 Aerolíneas</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-headset text-brand-gold"></i>
+                    <span>Soporte 24/7</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative text-white py-16 md:py-24 overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <!-- Background Image: User's specified path -->
+            <img src="assets\imperialhero.jpeg" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/0F121D/FFFFFF?text=Imagen+No+Disponible';"
+                 alt="Interior de una cabina de Business Class de lujo" 
+                 class="absolute inset-0 w-full h-full object-cover">
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Headline & Value Prop -->
+                    <div class="text-center md:text-left">
+                        <span class="inline-block bg-brand-gold text-brand-dark font-bold text-sm px-4 py-1 rounded-full mb-4 animate-bounce">OFERTA EXCLUSIVA</span>
+                        <h1 class="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-4">Tu Acceso a Business Class Exclusivo</h1>
+                        <p class="text-lg md:text-xl text-white-300 mb-6">Vuela en Business y First Class con hasta un 70% de descuento. Accedemos a tarifas de consolidador no disponibles al público para ofrecerte lujo a un precio inigualable.</p>
+                        <p class="text-sm text-white-400">Respuesta garantizada en menos de 30 minutos.</p>
+                    </div>
+
+                    <!-- Right Column: Lead Capture Form -->
+                    <div id="form-container">
+                        <form id="lead-form" class="bg-white p-8 rounded-lg shadow-2xl text-gray-800" novalidate>
+                            <h3 class="text-2xl font-serif font-bold text-center mb-1 text-brand-dark">Reserva Tu Vuelo</h3>
+                            <p class="text-center text-gray-600 mb-6">Inicia el proceso para asegurar tu asiento.</p>
+                            
+                            <!-- Form Fields -->
+                            <div class="grid grid-cols-1 gap-4">
+                                <!-- Datos del Cliente -->
+                                <input type="text" id="fullName" name="fullName" placeholder="Nombre completo" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                <div id="fullName-error" class="form-error-message hidden"></div>
+                                
+                                <div class="flex items-center border rounded-md focus-within:ring-2 focus-within:ring-brand-gold">
+                                    <select id="countryCode" name="countryCode" class="bg-gray-100 border-r h-full py-3 px-3 rounded-l-md focus:outline-none text-sm">
+                                        <option value="+52" selected>🇲🇽 +52</option>
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+39">🇮🇹 +39</option>
+                                        <option value="+81">🇯🇵 +81</option>
+                                        <option value="+86">🇨🇳 +86</option>
+                                        <option value="+55">🇧🇷 +55</option>
+                                        <option value="+54">🇦🇷 +54</option>
+                                        <option value="+57">🇨🇴 +57</option>
+                                        <option value="+56">🇨🇱 +56</option>
+                                        <option value="+51">🇵🇪 +51</option>
+                                        <option value="+971">🇦🇪 +971</option>
+                                        <option value="+41">🇨🇭 +41</option>
+                                        <option value="+61">🇦🇺 +61</option>
+                                        <option value="+7">🇷🇺 +7</option>
+                                        <option value="+91">🇮🇳 +91</option>
+                                    </select>
+                                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Teléfono WhatsApp" class="w-full px-4 py-3 border-0 focus:outline-none rounded-r-md" required>
+                                </div>
+                                <div id="whatsapp-error" class="form-error-message hidden -mt-3"></div>
+
+                                <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                <div id="email-error" class="form-error-message hidden -mt-3"></div>
+
+                                <!-- Datos del Viaje -->
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" id="origin" name="origin" placeholder="Ciudad de Origen" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required list="airport-list" onclick="this.value=''">
+                                    <input type="text" id="destination" name="destination" placeholder="Destino deseado" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required list="airport-list" onclick="this.value=''">
+                                    <datalist id="airport-list">
+                                        <!-- Lista de aeropuertos globales -->
+                                        <option value="Ciudad de México (MEX)">
+                                        <option value="Cancún (CUN)">
+                                        <option value="Guadalajara (GDL)">
+                                        <option value="Monterrey (MTY)">
+                                        <option value="Tijuana (TIJ)">
+                                        <option value="Los Ángeles (LAX)">
+                                        <option value="Nueva York (JFK)">
+                                        <option value="Miami (MIA)">
+                                        <option value="Chicago (ORD)">
+                                        <option value="Atlanta (ATL)">
+                                        <option value="Dallas/Fort Worth (DFW)">
+                                        <option value="Denver (DEN)">
+                                        <option value="San Francisco (SFO)">
+                                        <option value="Madrid (MAD)">
+                                        <option value="Barcelona (BCN)">
+                                        <option value="París (CDG)">
+                                        <option value="Londres (LHR)">
+                                        <option value="Ámsterdam (AMS)">
+                                        <option value="Frankfurt (FRA)">
+                                        <option value="Roma (FCO)">
+                                        <option value="Estambul (IST)">
+                                        <option value="Dubái (DXB)">
+                                        <option value="Doha (DOH)">
+                                        <option value="Tokio (HND)">
+                                        <option value="Seúl (ICN)">
+                                        <option value="Singapur (SIN)">
+                                        <option value="Hong Kong (HKG)">
+                                        <option value="Bangkok (BKK)">
+                                        <option value="Sídney (SYD)">
+                                        <option value="São Paulo (GRU)">
+                                        <option value="Bogotá (BOG)">
+                                        <option value="Buenos Aires (EZE)">
+                                        <option value="Lima (LIM)">
+                                        <option value="Santiago (SCL)">
+                                        <option value="Toronto (YYZ)">
+                                        <option value="Vancouver (YVR)">
+                                    </datalist>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 -mt-3">
+                                    <div id="origin-error" class="form-error-message hidden"></div>
+                                    <div id="destination-error" class="form-error-message hidden"></div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" id="departureDate" name="departureDate" placeholder="Fecha de ida" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                    <input type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" id="returnDate" name="returnDate" placeholder="Fecha de regreso" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 -mt-3">
+                                    <div id="departureDate-error" class="form-error-message hidden"></div>
+                                    <div id="returnDate-error" class="form-error-message hidden"></div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <select id="passengers" name="passengers" class="w-full px-4 py-3 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                        <option value="" disabled selected># Pasajeros</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="5+">5+</option>
+                                    </select>
+                                    <select id="class" name="class" class="w-full px-4 py-3 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                        <option value="" disabled selected>Clase Preferida</option>
+                                        <option value="Business">Business</option>
+                                        <option value="First">First</option>
+                                        <option value="Premium Economy">Premium Economy</option>
+                                    </select>
+                                </div>
+
+                                <select id="budget" name="budget" class="w-full px-4 py-3 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold" required>
+                                    <option value="" disabled selected>Presupuesto por pasajero (USD)</option>
+                                    <option value="2000-3000">$2,000 - $3,000</option>
+                                    <option value="3000-5000">$3,000 - $5,000</option>
+                                    <option value="5000-8000">$5,000 - $8,000</option>
+                                    <option value="8000+">$8,000+</option>
+                                    <option value="Flexible">Flexible</option>
+                                </select>
+
+                                <textarea id="comments" name="comments" placeholder="Comentarios adicionales (ej. aerolínea preferida, flexibilidad de fechas)" rows="2" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+                            </div>
+
+                            <!-- CTA Button -->
+                            <button type="submit" class="w-full bg-brand-gold hover:bg-yellow-500 text-brand-dark font-bold text-lg py-4 px-4 rounded-md mt-6 transition duration-300 transform hover:scale-105 pulse-slow">
+                                🚀 RESERVAR MI ASIENTO
+                            </button>
+                            
+                            <p class="text-xs text-gray-500 text-center mt-4">Al enviar, acepto ser contactado vía WhatsApp/teléfono por un asesor de Imperial Fly.</p>
+                        </form>
+                        <div id="form-success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative mt-6 text-center" role="alert">
+                            <strong class="font-bold">¡Gracias!</strong>
+                            <span class="block sm:inline">Hemos recibido tu solicitud. Un asesor te contactará en menos de 30 minutos.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICE COMPARISON SECTION -->
+        <section class="py-16 bg-black/20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Ahorros Reales Para Clientes Reales</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-6">Estas ofertas exclusivas terminan pronto. ¡No pagues de más por el mismo asiento!</p>
+                
+                <!-- Countdown Timer -->
+                <div class="bg-brand-dark border border-brand-gold/20 rounded-lg p-4 max-w-md mx-auto mb-12 shadow-lg">
+                    <p class="text-brand-gold mb-2">Las ofertas cambian en:</p>
+                    <div id="countdown-timer" class="text-4xl font-bold text-white tracking-widest">
+                        23:59:59
+                    </div>
+                </div>
+
+                <div id="deals-container" class="grid md:grid-cols-3 gap-8">
+                    <!-- Deal 1 -->
+                    <div class="deal-card bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="deal-title text-xl font-bold text-brand-gold mb-2 font-serif"></h3>
+                        <p class="deal-regular-price text-gray-500 line-through text-lg"></p>
+                        <p class="deal-our-price text-white font-extrabold text-3xl my-2"></p>
+                        <div class="deal-savings-banner bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                        </div>
+                    </div>
+                    <!-- Deal 2 -->
+                    <div class="deal-card bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="deal-title text-xl font-bold text-brand-gold mb-2 font-serif"></h3>
+                        <p class="deal-regular-price text-gray-500 line-through text-lg"></p>
+                        <p class="deal-our-price text-white font-extrabold text-3xl my-2"></p>
+                        <div class="deal-savings-banner bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                        </div>
+                    </div>
+                    <!-- Deal 3 -->
+                    <div class="deal-card bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="deal-title text-xl font-bold text-brand-gold mb-2 font-serif"></h3>
+                        <p class="deal-regular-price text-gray-500 line-through text-lg"></p>
+                        <p class="deal-our-price text-white font-extrabold text-3xl my-2"></p>
+                        <div class="deal-savings-banner bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-12 text-center">La Experiencia Imperial Fly</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+                    <!-- Benefit 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-gold text-brand-dark rounded-full w-20 h-20 flex items-center justify-center mb-4 text-3xl floating">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Respuesta Rápida</h3>
+                        <p class="text-gray-400">Tu tiempo es valioso. Recibe opciones de vuelo personalizadas en menos de 30 minutos.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-gold text-brand-dark rounded-full w-20 h-20 flex items-center justify-center mb-4 text-3xl floating">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Asesor Dedicado</h3>
+                        <p class="text-gray-400">Un experto en viajes de lujo gestionará tu reserva de principio a fin, asegurando cada detalle.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-gold text-brand-dark rounded-full w-20 h-20 flex items-center justify-center mb-4 text-3xl floating">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">100% Seguro</h3>
+                        <p class="text-gray-400">Emitimos boletos oficiales directamente con las aerolíneas. Tu viaje está garantizado.</p>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-brand-gold text-brand-dark rounded-full w-20 h-20 flex items-center justify-center mb-4 text-3xl floating">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Acceso Exclusivo</h3>
+                        <p class="text-gray-400">Gracias a nuestras alianzas, te ofrecemos tarifas que no encontrarás en portales públicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="py-16 bg-black/20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">Lo que dicen nuestros clientes ejecutivos</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                        <div class="text-brand-gold mb-2 text-xl">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-gray-300">"Necesitaba un vuelo a Frankfurt de último minuto. Imperial Fly no solo lo consiguió, sino que me ahorró casi el 50% del costo que veía online. Su servicio es impecable."</p>
+                        <p class="font-bold text-white">Carlos Herrera</p>
+                        <p class="text-sm text-gray-400">CEO, Tech Solutions - Monterrey</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                        <div class="text-brand-gold mb-2 text-xl">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-gray-300">"Organizar el viaje anual de directivos era un dolor de cabeza. Ahora solo le paso los detalles a mi asesor en Imperial Fly y él se encarga de todo. Eficiencia y ahorro."</p>
+                        <p class="font-bold text-white">Sofía Valdés</p>
+                        <p class="text-sm text-gray-400">Directora de Operaciones - Guadalajara</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10">
+                        <div class="text-brand-gold mb-2 text-xl">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-gray-300">"Como viajero frecuente, valoro el servicio personalizado. Mi asesor ya conoce mis preferencias de asiento y aerolínea. Es como tener un asistente de viajes personal."</p>
+                        <p class="font-bold text-white">Javier Morales</p>
+                        <p class="text-sm text-gray-400">Consultor Financiero - CDMX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-brand-dark border border-brand-gold/20 p-8 md:p-12 rounded-lg shadow-2xl shadow-brand-gold/10 max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white text-center mb-4">¿Listo para tu próximo viaje de lujo?</h2>
+                    <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">Completa el formulario y deja que nuestros expertos encuentren la mejor opción para ti. La consulta es 100% gratuita y sin compromiso.</p>
+                    <div class="text-center">
+                        <a href="#hero" class="bg-brand-gold hover:bg-yellow-500 text-brand-dark font-bold text-lg py-4 px-8 rounded-md transition duration-300 transform hover:scale-105 inline-block pulse-slow">
+                            🚀 OBTENER MI TARIFA PREFERENCIAL
+                        </a>
+                    </div>
+                    <div class="text-center mt-8 pt-6 border-t border-white/10">
+                        <p class="text-gray-300 font-semibold mb-2">O contáctanos directamente:</p>
+                        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                            <a href="https://wa.me/5215512345678" target="_blank" class="text-gray-300 hover:text-brand-gold transition duration-300"><i class="fab fa-whatsapp mr-2"></i>+52 1 55 1234 5678</a>
+                            <a href="tel:+525512345678" class="text-gray-300 hover:text-brand-gold transition duration-300"><i class="fas fa-phone mr-2"></i>(55) 1234-5678</a>
+                            <a href="mailto:contacto@imperialfly.mx" class="text-gray-300 hover:text-brand-gold transition duration-300"><i class="fas fa-envelope mr-2"></i>contacto@imperialfly.mx</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black/20 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2024 Imperial Fly. Todos los derechos reservados. Empresa registrada en México.</p>
+            <p class="text-gray-400 mt-2">Tu especialista en viajes de lujo a precios accesibles.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Validation and Interactivity -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Form Validation Logic ---
+        const form = document.getElementById('lead-form');
+        const successMessage = document.getElementById('form-success-message');
+        const formContainer = document.getElementById('form-container');
+        const fullName = document.getElementById('fullName');
+        const whatsapp = document.getElementById('whatsapp');
+        const email = document.getElementById('email');
+        const origin = document.getElementById('origin');
+        const destination = document.getElementById('destination');
+        const departureDate = document.getElementById('departureDate');
+        const returnDate = document.getElementById('returnDate');
+        const today = new Date().toISOString().split('T')[0];
+        departureDate.setAttribute('min', today);
+        returnDate.setAttribute('min', today);
+        departureDate.addEventListener('change', function() {
+            if (departureDate.value) {
+                returnDate.setAttribute('min', departureDate.value);
+            }
+        });
+        whatsapp.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+            document.querySelectorAll('.form-input-error').forEach(el => el.classList.remove('form-input-error'));
+            document.querySelectorAll('.form-error-message').forEach(el => {
+                el.textContent = '';
+                el.classList.add('hidden');
+            });
+            if (!validateRequired(fullName, 'Por favor, ingresa tu nombre completo.')) isValid = false;
+            if (!validatePhone(whatsapp, 'Ingresa un número de WhatsApp válido.')) isValid = false;
+            if (!validateEmail(email, 'Ingresa un correo electrónico válido.')) isValid = false;
+            if (!validateRequired(origin, 'Selecciona una ciudad de origen.')) isValid = false;
+            if (!validateRequired(destination, 'Ingresa tu destino deseado.')) isValid = false;
+            if (!validateRequired(departureDate, 'Selecciona una fecha de ida.')) isValid = false;
+            if (!validateRequired(returnDate, 'Selecciona una fecha de regreso.')) isValid = false;
+            if (!validateDateOrder(departureDate, returnDate, 'La fecha de regreso no puede ser anterior a la de ida.')) isValid = false;
+            if (isValid) {
+                console.log('Formulario válido. Enviando datos...');
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+        function showError(input, message) {
+            const errorDiv = document.getElementById(`${input.id}-error`);
+            input.parentElement.classList.add('form-input-error'); // Highlight the whole group
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.classList.remove('hidden');
+            }
+        }
+        function validateRequired(input, message) { if (input.value.trim() === '') { showError(input, message); return false; } return true; }
+        function validateEmail(input, message) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailRegex.test(input.value.trim())) { showError(input, message); return false; } return true; }
+        function validatePhone(input, message) { const phoneDigits = input.value.replace(/\D/g, ''); if (phoneDigits.length < 8) { showError(input, message); return false; } return true; }
+        function validateDateOrder(start, end, message) { if (start.value && end.value && new Date(end.value) < new Date(start.value)) { showError(end, message); return false; } return true; }
+
+        // --- Dynamic Deals and Countdown Timer Logic ---
+
+        const allDeals = [
+            { route: "CDMX → Madrid", regular: 6500, ours: 2500 },
+            { route: "GDL → Nueva York", regular: 4200, ours: 1800 },
+            { route: "MTY → Tokio", regular: 8500, ours: 3200 },
+            { route: "CUN → París", regular: 7200, ours: 2900 },
+            { route: "MEX → Londres", regular: 6800, ours: 2750 },
+            { route: "GDL → Los Ángeles", regular: 3500, ours: 1500 },
+            { route: "MTY → Dubái", regular: 9200, ours: 4100 },
+            { route: "CUN → Roma", regular: 7500, ours: 3100 },
+            { route: "MEX → São Paulo", regular: 5500, ours: 2400 },
+            { route: "TIJ → Seúl", regular: 7900, ours: 3500 },
+        ];
+
+        const dealCards = document.querySelectorAll('.deal-card');
+
+        function updateDeals() {
+            const shuffled = [...allDeals].sort(() => 0.5 - Math.random());
+            const selectedDeals = shuffled.slice(0, 3);
+            selectedDeals.forEach((deal, index) => {
+                const card = dealCards[index];
+                if(card) {
+                    const savings = deal.regular - deal.ours;
+                    card.querySelector('.deal-title').textContent = deal.route;
+                    card.querySelector('.deal-regular-price').textContent = `Precio regular: $${deal.regular.toLocaleString()} USD`;
+                    card.querySelector('.deal-our-price').innerHTML = `Nuestro Precio: $${deal.ours.toLocaleString()} <span class="text-lg font-bold">USD</span>`;
+                    card.querySelector('.deal-savings-banner').textContent = `¡Ahorraste $${savings.toLocaleString()} USD!`;
+                }
+            });
+        }
+
+        const countdownElement = document.getElementById('countdown-timer');
+        const countdownDuration = 24 * 60 * 60 * 1000; // 24 hours
+
+        function startCountdown() {
+            let targetTime = localStorage.getItem('countdownTarget');
+            if (!targetTime || new Date().getTime() > targetTime) {
+                targetTime = new Date().getTime() + countdownDuration;
+                localStorage.setItem('countdownTarget', targetTime);
+                updateDeals();
+            }
+
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetTime - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    localStorage.removeItem('countdownTarget');
+                    startCountdown();
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.textContent = 
+                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            }, 1000);
+        }
+        
+        // Initialize
+        updateDeals(); // Load deals on first page visit
+        startCountdown();
+    });
+    </script>
+</body>
+</html>
