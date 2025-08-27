@@ -319,10 +319,10 @@
             </div>
         </section>
 
-        <!-- PRICE COMPARISON SECTION -->
+        <!-- DAILY DEALS SECTION -->
         <section class="py-16 bg-black/20">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Ahorros Reales Para Clientes Reales</h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">OFERTA DEL DÍA</h2>
                 <p class="max-w-3xl mx-auto text-gray-400 mb-6">Estas ofertas exclusivas terminan pronto. ¡No pagues de más por el mismo asiento!</p>
                 
                 <!-- Countdown Timer -->
@@ -362,8 +362,46 @@
             </div>
         </section>
 
-        <!-- BENEFITS SECTION -->
+        <!-- STATIC DEALS SECTION -->
         <section class="py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">OFERTAS EXCLUSIVAS</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-12">Nuestras tarifas preferenciales en rutas populares, disponibles por más tiempo.</p>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Static Deal 1 -->
+                    <div class="bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="text-xl font-bold text-brand-gold mb-2 font-serif">GDL → Los Ángeles</h3>
+                        <p class="text-gray-500 line-through text-lg">Precio regular: $3,500 USD</p>
+                        <p class="text-white font-extrabold text-3xl my-2">Nuestro Precio: $1,500 <span class="text-lg font-bold">USD</span></p>
+                        <div class="bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                            ¡Ahorraste $2,000 USD!
+                        </div>
+                    </div>
+                    <!-- Static Deal 2 -->
+                    <div class="bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="text-xl font-bold text-brand-gold mb-2 font-serif">MTY → Dubái</h3>
+                        <p class="text-gray-500 line-through text-lg">Precio regular: $9,200 USD</p>
+                        <p class="text-white font-extrabold text-3xl my-2">Nuestro Precio: $4,100 <span class="text-lg font-bold">USD</span></p>
+                        <div class="bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                            ¡Ahorraste $5,100 USD!
+                        </div>
+                    </div>
+                    <!-- Static Deal 3 -->
+                    <div class="bg-brand-dark p-6 rounded-lg shadow-lg text-left transform hover:scale-105 transition duration-300 border border-white/10">
+                        <h3 class="text-xl font-bold text-brand-gold mb-2 font-serif">CUN → Roma</h3>
+                        <p class="text-gray-500 line-through text-lg">Precio regular: $7,500 USD</p>
+                        <p class="text-white font-extrabold text-3xl my-2">Nuestro Precio: $3,100 <span class="text-lg font-bold">USD</span></p>
+                        <div class="bg-brand-gold/10 text-brand-gold text-center font-bold py-2 px-4 rounded-md mt-4">
+                            ¡Ahorraste $4,400 USD!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="py-16 bg-black/20">
             <div class="container mx-auto px-6">
                  <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-12 text-center">La Experiencia Imperial Fly</h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
@@ -404,7 +442,7 @@
         </section>
 
         <!-- TESTIMONIALS SECTION -->
-        <section class="py-16 bg-black/20">
+        <section class="py-16">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">Lo que dicen nuestros clientes ejecutivos</h2>
                 <div class="grid md:grid-cols-3 gap-8">
@@ -440,7 +478,7 @@
         </section>
 
         <!-- FINAL CTA SECTION -->
-        <section class="py-20">
+        <section class="py-20 bg-black/20">
             <div class="container mx-auto px-6">
                 <div class="bg-brand-dark border border-brand-gold/20 p-8 md:p-12 rounded-lg shadow-2xl shadow-brand-gold/10 max-w-4xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-white text-center mb-4">¿Listo para tu próximo viaje de lujo?</h2>
@@ -521,7 +559,7 @@
         });
         function showError(input, message) {
             const errorDiv = document.getElementById(`${input.id}-error`);
-            input.parentElement.classList.add('form-input-error'); // Highlight the whole group
+            input.parentElement.classList.add('form-input-error');
             if (errorDiv) {
                 errorDiv.textContent = message;
                 errorDiv.classList.remove('hidden');
@@ -597,7 +635,7 @@
         }
         
         // Initialize
-        updateDeals(); // Load deals on first page visit
+        updateDeals();
         startCountdown();
     });
     </script>
